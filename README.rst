@@ -3,7 +3,7 @@ arbitrator
 
 Negotiates and handles Content-Type / Accept header negotiation for you.
 
-|Version| |Downloads| |Status| |License|
+|Version| |Downloads| |Status| |License| |Coverage|
 
 Overview
 ---------
@@ -97,3 +97,6 @@ General Info
 
 .. |License| image:: https://pypip.in/license/arbitrator/badge.svg
    :target: https://arbitrator.readthedocs.org/
+
+.. |Coverage| image:: https://coveralls.io/repos/djt5019/arbitrator/badge.svg?branch=master
+   :target: https://coveralls.io/r/djt5019/arbitrator?branch=master
