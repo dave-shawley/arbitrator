@@ -22,11 +22,11 @@ class ArbitratedApplication(web.Application):
         super(ArbitratedApplication, self).__init__(*args, **kwargs)
 
     def decode_request(self, request):
-        content_type = headers.parse_content_type(
+        content_type = headers.parse_http_accept_header(
             request.headers.get('Content-Type', self._default_content_type))
         try:
             selected, _ = algorithms.select_content_type(
-                [content_type], self._supported_mime_types)
+                content_type, self._supported_mime_types)
             handler = self._handlers[selected]
         except errors.NoMatch:
             raise web.HTTPError(415)
